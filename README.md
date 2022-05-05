@@ -13,3 +13,7 @@
 ## reference
 
     -Spoonacular : https://spoonacular.com/food-api
+
+## deployed on netlify
+
+    -link : https://tubular-fudge-830af5.netlify.app/
