@@ -12,10 +12,8 @@ function Popular() {
   const getPopular = async () => {
     const check = localStorage.getItem("popular");
     if (check) {
-      console.log("in if part");
       setPopular(JSON.parse(check));
     } else {
-      console.log("in else part");
       const response = await fetch(API);
       const data = await response.json();
       localStorage.setItem("popular", JSON.stringify(data.recipes));

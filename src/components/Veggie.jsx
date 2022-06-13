@@ -12,13 +12,11 @@ function Veggie() {
   const getVeggie = async () => {
     const check = localStorage.getItem("veggie");
     if (check) {
-      console.log("in local storage");
       console.log(check);
       setVeggie(JSON.parse(check));
     } else {
       const response = await fetch(API);
       const data = await response.json();
-      console.log("got response");
       localStorage.setItem("veggie", JSON.stringify(data.recipes));
       setVeggie(data.recipes);
     }
